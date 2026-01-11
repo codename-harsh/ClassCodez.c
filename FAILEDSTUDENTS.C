@@ -17,7 +17,7 @@ fflush(stdin);
     gets(s[i].branch);
     scanf("%d %d",&s[i].year,&s[i].marks);
 }
-printf("The Failed students are : \n");
+printf("The Failed students are : \n");    
 for(int i=0;i<n;i++){
    if(s[i].marks<40){ 
     printf("%d %s %s %d %d\n",s[i].rollno,s[i].name,s[i].branch,s[i].year,s[i].marks);
