@@ -1,15 +1,14 @@
-#include<stdio.h>
-int dto(int n){
-    int d=0;
-    int r=n%8;
-    int i;
-    d+=(r*i);
-    i*=10;
-    n/=10;
-    return d;
-}
+#include <stdio.h>
 int main(){
-    int n=10;
-    printf("%d",dto(n));
-    
+    int decimal, octal = 0, place = 1, rem;
+    printf("Enter a decimal number: ");
+    scanf("%d", &decimal);
+    while (decimal > 0) {
+        rem = decimal % 8; //jana
+        octal +=rem * place;         // -> learn it like jana-aana-jana !
+        place = place * 10; //aana
+        decimal = decimal / 8; // jana
+    }
+    printf("Octal number = %d", octal);
+    return 0;
 }
